@@ -1,0 +1,433 @@
+@import 'vars';
+@import 'header';
+@import 'footer';
+
+// .dm-serif display-regular {
+//     font-family: "DM Serif Display", serif;
+//     font-weight: 400;
+//     font-style: normal;
+//   }
+
+//   .dm-serif display-regular-italic {
+//     font-family: "DM Serif Display", serif;
+//     font-weight: 400;
+//     font-style: italic;
+//   }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: #FFF;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.hero {
+    &__box {
+        aspect-ratio: 1.58;
+        position: relative;
+        background: rgb(244, 240, 236);
+        border-radius: 70px;
+        height: 100%;
+    }
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        padding-left: 52px;
+        display: flex;
+        flex-direction: column;
+        width: 51%;
+    }
+
+    &__img {
+        position: absolute;
+        object-fit: cover;
+        border-radius: 70px;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    &__text {
+        margin-bottom: 21px;
+        font-size: 22px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: rgb(77, 80, 83);
+    }
+}
+
+.projects-advantages {
+    padding-top: 96px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    &__list {
+        width: 100%;
+        padding-top: 96px;
+        padding-bottom: 96px;
+        display: grid;
+        grid-template-columns: repeat(2, 46%);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 56px;
+        list-style: none;
+        justify-content: space-between;
+
+    }
+
+}
+
+.interior-card {
+     display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__img-box {
+        height: 525px;
+        overflow: hidden;
+
+        &_right-top-corner {
+            border-top-right-radius: 80px;
+        }
+
+        &_left-top-corner {
+            border-top-left-radius: 80px;
+        }
+
+        &_right-bottom-corner {
+            border-bottom-right-radius: 80px;
+        }
+
+        &_left-bottom-corner {
+            border-bottom-left-radius: 80px;
+        }
+    }
+
+    &__image {
+        object-fit: cover;
+    }
+
+    &__title {
+        font-size: 25px;
+        line-height: 125%;
+        letter-spacing: 0.02em;
+        color: $colorText;
+        font-family: "DM Serif Display", serif;
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: rgb(77, 80, 83);
+    }
+
+    &__info-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__arrow-box {
+        border-radius: 50%;
+        background-color: rgb(244, 240, 236);
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: rgb(205, 162, 116);
+        }
+
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+.advantages {
+    background: rgb(244, 240, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__box {
+        width: 100%;
+        padding-top: 151px;
+        padding-bottom: 151px;
+        padding-left: calc(50% - 541px);
+        padding-right: calc(50% - 541px);
+    }
+
+    &__list {
+
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        background: rgb(255, 255, 255);
+    }
+
+    &__number {
+        font-weight: 400;
+        font-size: 85px;
+        line-height: 125%;
+        letter-spacing: 0.02em;
+        color: rgb(205, 162, 116);
+        font-family: "DM Serif Display", serif;
+    }
+
+    &__item {
+        flex: 1 1 auto;
+    }
+
+    &__item+&__item {
+        border-left: 1px solid rgb(205, 162, 116, 1);
+        border-image: linear-gradient(to top, rgb(205, 162, 116, 1) 84%, rgba(205, 162, 116, 0) 16%);
+        border-image-slice: 1;
+    }
+
+
+    &__item-box {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+.articles {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+    &__list {
+        padding-top: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+
+    &__item {
+        width: 31.9%;
+        border-radius: 62px;
+
+        &:first-child {
+            border: 1px solid rgb(231, 231, 231);
+        }
+
+        &:last-child {
+            border: 1px solid rgb(231, 231, 231);
+        }
+
+        &:not(:first-child):not(:last-child) {
+            box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+            background: rgb(244, 240, 236);
+        }
+    }
+
+    &__arrow-date-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+.article-card {
+    padding: 21px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+
+    &__img-box {
+        height: 290px;
+        overflow: hidden;
+        border-top-right-radius: 62px;
+        border-top-left-radius: 62px;
+    }
+
+    &__image {
+        object-fit: cover;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__title {
+        font-family: "DM Serif Display", serif;
+        font-size: 25px;
+        line-height: 125%;
+        letter-spacing: 0.02em;
+        color: $colorText;
+
+    }
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 17px;
+    }
+
+    &__arrow-date-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__date {
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: rgb(77, 80, 83);
+    }
+
+    &__arrow-box {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(244, 240, 236);
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: rgb(205, 162, 116);
+        }
+
+        &_light {
+            background-color: rgb(255, 255, 255);
+        }
+
+    }
+
+}
+
+
+.lead {
+    color: rgb(41, 47, 54);
+    font-size: 65px;
+    line-height: 125%;
+    font-family: "DM Serif Display", serif;
+    margin-bottom: 18px;
+}
+
+.visually-hidden {
+    visibility: hidden;
+    display: none;
+}
+
+.button {
+    width: 214px;
+    height: 74px;
+    background: $colorText;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+
+    &__text {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 125%;
+        letter-spacing: 0.02em;
+        color: rgb(255, 255, 255);
+        transition: 0.3s;
+    }
+
+    &:hover {
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(205, 162, 116);
+    }
+
+    &:hover &__text {
+        color: $colorText;
+    }
+}
+
+.section-title {
+    font-family: "DM Serif Display", serif;
+    font-size: 50px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    color: $colorText;
+}
+
+.section-text {
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: rgb(77, 80, 83);
+    width: 65%;
+    text-align: center;
+    &_footer{
+        text-align: left;
+        width: 80%;
+    }
+
+    &_advantages {
+        white-space: nowrap;
+    }
+}
+
+// @media(max-width: 1100px) {
+//     .projects {
+//         &__list {
+//             justify-content: center;
+//         }
+//     }
+
+// }

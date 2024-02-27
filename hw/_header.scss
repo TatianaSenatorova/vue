@@ -1,0 +1,41 @@
+@import 'vars';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 44px;
+    padding-bottom: 57px;
+}
+
+.navigation {
+    &__list {
+        display: flex;
+        list-style: none;
+    }
+    &__item {
+        font-size: 20px;
+        line-height: 125%;
+
+        &:not(:first-child):not(:last-child) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        &:last-child {
+            padding-left: 30px;
+        }
+
+        &:first-child {
+            padding-right: 30px;
+        }
+    }
+    &__link {
+        color: $colorText;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    &__item:hover  &__link{
+        color: $colorLightBrown;
+    }
+}
