@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- <script src="task_1.js" defer></script> -->
+    <script src="task_2.js" defer></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- task_2 -->
+        <h2>Список пользователей</h2>
+        <ul>
+            <li v-for="user in users" :key="user.id">
+                <span>Name: {{user.userName}}</span>
+                <span>Age: {{user.userAge}}</span>
+
+            </li>
+
+        </ul>
+
+        <!-- task_1 -->
+        <!-- <article class="product">
+            <h3 class="product__title" v-text="product.productName"></h3>
+            <img :src="product.productUrl" :alt="product.productAlt">
+            <span class="product__price">{{product.productPrice}}</span>
+            <button @click="getDiscount">Получить скидку</button>
+
+        </article> -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="list.js" defer></script>
+</head>
+
+<body>
+    <div id="app">
+        <article v-for="article in data" :key="article.id" class="article">
+            <h2 class="article__title">{{article.title}}</h2>
+            <p class="article__text">{{article.text}}</p>
+        </article>
+        <!-- если есть класс лайк, то убираем, если нет, то добавляем.
+        likeToggle у нас в значении true, поэтому для баттон добавился класс лайк
+        -->
+        <button class="btn" @click="likeToggle = !likeToggle" :class="{like: likeToggle}">like</button>
+
+
+        <h2>Лист</h2>
+        <ul>
+            <!-- v-for пробегается по массиву и сразу присваивается уникальный id. -->
+            <li v-for="item in listItems" :key="item.id">{{item}}</li>
+        </ul>
+        <!-- будем добавлять новый элемент списка(newList), который вводит пользователь. При нажатии клавиши enter выполняем -->
+        <input type="text" v-model="newList" @keyup.enter="addItem">
+
+    </div>
+
+</body>
+
+</html>

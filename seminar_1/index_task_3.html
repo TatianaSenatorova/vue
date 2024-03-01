@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./task_3.js" defer></script>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="isOlder">
+            Мне исполнилось 14 лет
+        </button>
+        <button @click="isUnder">
+            Мне еще нет 14 лет
+        </button>
+        <h3 v-if="date">Можете заказать товар</h3>
+        <h3 v-else>Доступ закрыт</h3>
+    </div>
+
+    <!-- 
+        <button data-mode="pass" v-on:click="checkAge">Мне исполнилось 14 лет!</button>
+        <button data-mode="nopass" @click="checkAge">А мне пока не исполнилось</button>
+
+        checkAge({target}) {
+        target.dataset.mode === "pass" ? this.checktext = "Можно заказать товар" : this.checktext = "Доступ закрыт"
+}, -->
+
+<!-- new Vue({
+    el: '#app2',
+    data: {
+    canOrder: false
+    },
+    methods: {
+    allowOrder() {
+    this.canOrder = true;
+    this.status = 'Можете заказать товар';
+    },
+    disallowOrder() {
+    this.canOrder = false;
+    this.status = 'Доступ закрыт';
+    }
+    }
+    }); -->
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <form @submit.prevent()>
+            <label for="sorting">
+                Сортировать:
+            </label>
+            <select name="select" id="sorting" v-model="selectValue">
+                <option value="low-price-first">Сначала недорогие товары</option>
+                <option value="high-price-first">Сначала дорогие товары</option>
+            </select>
+         </form>
+        <h5>Список товаров</h5>
+        <ul>
+            <li v-for="product in sortProducts" :key="product.id">
+                <span>{{product.productName}}</span>
+                <span>{{product.productPrice}}</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+
+</html>
