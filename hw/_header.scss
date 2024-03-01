@@ -5,37 +5,30 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 44px;
-    padding-bottom: 57px;
+    padding-bottom: 45px;
+    min-height: 151px;
 }
 
 .navigation {
+    width: 20.25%;
+
     &__list {
         display: flex;
+        justify-content: space-between;
         list-style: none;
     }
+
     &__item {
-        font-size: 20px;
         line-height: 125%;
-
-        &:not(:first-child):not(:last-child) {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-
-        &:last-child {
-            padding-left: 30px;
-        }
-
-        &:first-child {
-            padding-right: 30px;
-        }
     }
+
     &__link {
         color: $colorText;
         cursor: pointer;
         transition: 0.3s;
     }
-    &__item:hover  &__link{
-        color: $colorLightBrown;
+
+    &__item:hover &__link {
+        color: $colorHover;
     }
 }

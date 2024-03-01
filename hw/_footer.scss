@@ -24,7 +24,7 @@
         transition: 0.3s;
 
         &:hover {
-            color: $colorLightBrown;
+            color: $colorHover;
         }
     }
 
@@ -64,12 +64,13 @@
 
 }
 address{
-    all: initial;  
+    font-style: normal;
+    line-height: 300%; 
 }
 .contacts {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 9px;
 
     &__item{
         // all: initial;
