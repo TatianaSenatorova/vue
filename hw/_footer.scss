@@ -16,12 +16,9 @@
     }
 
     &__link {
-       
-        font-size: 22px;
-        line-height: 300%;
-        letter-spacing: 0.01em;
-        color: #4d5053;
+        line-height: 66px;
         transition: 0.3s;
+        color: #4D5053;
 
         &:hover {
             color: $colorHover;
@@ -51,7 +48,7 @@
     }
 
     &__link:hover &__icon path {
-        fill: rgb(205, 162, 116);
+        fill: #cda274;
     }
 
 }
@@ -59,25 +56,24 @@
 .footer-title {
     font-family: "DM Serif Display", serif;
     font-size: 25px;
-    line-height: 125%;
-    color: rgb(41, 47, 54);
+    line-height: 31.25px;
+    color: #292f36;
 
 }
-address{
+
+address {
     font-style: normal;
-    line-height: 300%; 
+    line-height: 300%;
+    color: #4D5053;
 }
+
 .contacts {
     display: flex;
     flex-direction: column;
     gap: 9px;
 
-    &__item{
-        // all: initial;
-            font-size: 22px;
-        line-height: 150%;
-        letter-spacing: 0.01em;
-        color: #4d5053;
-      
+    &__item {
+        text-decoration: none;
+        color: #4D5053;
     }
 }
