@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+ 
+  <!-- <script src="task_1.js" defer></script> -->
+</head>
+
+<body>
+  <div id="app">
+    <!-- здесь мы вызываем нашу компоненту -->
+    <!-- теперь у нас есть возможность передать через атрибут любое значение -->
+    <!-- <new-component title="hello new title"></new-component> -->
+    <!-- <new-component :title="article" v-for="article in articles" :key="article.id"></new-component>
+          -->
+    <!-- <new-component title="hello new"></new-component>
+    <new-component title="hello new 2"></new-component> -->
+    <component :is="changeTabs"></component>
+    <button v-for="nameButton in nameButtons" :key="nameButton.id">
+      {{nameButton}}
+    </button>
+</div>
+<script src="component.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          nameButtons: ['one', 'two', 'three'],
+          currentTab: 'one',
+        },
+        computed: {
+          changeTabs() {
+            return `change-${this.currentTab}`;
+          },
+
+        },
+      });
+
+
+    </script>
+
+</body>
+
+</html>
